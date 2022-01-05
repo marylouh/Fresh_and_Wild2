@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace FreshAndWild2.Models
 {
@@ -31,7 +32,19 @@ namespace FreshAndWild2.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost;user id=root;password=rrrrr;database=FreshAndWild");
+            //optionsBuilder.UseMySql("server=localhost;user id=root;password=rrrrr;database=FreshAndWild");
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                optionsBuilder.UseMySql("server=localhost;user id=root;password=rrrrr;database=FreshAndWild");
+            }
+            else
+            {
+                IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+                optionsBuilder.UseMySql(configuration.GetConnectionString("DefaultConnection"));
+            }
         }
 
         public BddContext()
