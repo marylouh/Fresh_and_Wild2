@@ -1,0 +1,70 @@
+﻿@model List<FreshAndWild2.Models.Produit>;
+@{ Layout = "_LayoutDuSite";
+    ViewBag.Title = "boutique";}
+
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>La Boutique</h2>
+                <ol>
+                    <li><a href="/Home/Index">Accueil</a></li>
+                    <li>Boutique</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="boutique" class="boutique">
+
+        <div class="container">
+            @*<div class="en-tete">
+                    <p>
+                        Pas le temps de faire vos confitures à la maison ? Nos producteurs pensent à tout et vous proposent des produits de la ferme, prêt à cuisiner. Des confitures, des conserves mais également des produits frais et de la viande. Commandez et recevez un petit morceau de ferme chez vous.
+                        <br />Les produits sont expédiés directement par le producteur.
+
+                    </p>
+                </div>*@
+
+            <div class="section-title">
+                <h2>Produits</h2>
+                <p>
+                    Pas le temps de faire vos confitures à la maison ? Nos producteurs pensent à tout et vous proposent des produits de la ferme, prêt à cuisiner. Des confitures, des conserves mais également des produits frais et de la viande. Commandez et recevez un petit morceau de ferme chez vous.
+                    <br />Les produits sont expédiés directement par le producteur.
+
+                </p>
+            </div>
+
+            <div class="row pt-5 ">
+
+                @foreach (var produit in Model.Skip(9))
+                {
+                    <div class="col-md-3 col-sm-6 ">
+
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    @{ var ip = "~/img/Produits/p" + produit.Id + ".jpg";}
+                                    <img src="@Url.Content(ip)" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h2 class="title">@produit.Nom - @produit.Conditionnement</h2>
+                                <div class="texte-grille">@produit.Producteur</div>
+                                <div class="price">@produit.Prix  Eur</div>
+
+                                @Html.ActionLink("AJOUTER AU PANIER", "AjouterAuPanier", "Panier", new { id = @produit.Id }, new { @class = "add_to_cart" })
+
+
+                                @{ var dp = "/Produit/DetailsProduit/" + produit.Id;}
+                                <a class="add_to_cart" href=@dp>DETAILS</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </section>

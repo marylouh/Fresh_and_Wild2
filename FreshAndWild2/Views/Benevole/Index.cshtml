@@ -1,0 +1,71 @@
+﻿@model List<FreshAndWild2.Models.Session>
+
+    @{ Layout = "_LayoutDuSite";
+
+
+    }
+   
+    <!--<head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Connexion Fresh & Wild</title>
+        <meta content="Mangez frais, mangez bio !" name="description">
+        <meta content="AMAP, bio, nourriture, santé" name="keywords">-->
+
+        <!-- Template Main CSS File -->
+        <!--<link href="~/css/Connexion.css" rel="stylesheet">
+
+    </head>-->
+    
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2> Se porter volontaire</h2>
+                <ol>
+                    <li><a href="/Home/Index">Accueil</a></li>
+                    <li>Bénévolat</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Session</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Benevole</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var session in Model)
+
+                {
+                    <tr>
+                        <td>@session.Id</td>
+                        <td>@session.DateSession.ToShortDateString()</td>
+                        <td>@session.NbreDeBenevoleDemandee</td>
+                        <td>
+
+                            @Html.ActionLink("Se porter benevole", "Se porter benevole", "Se porter benevole", new { @id = session.Id })
+                        </td>
+
+                    </tr>
+                }
+
+
+
+
+            </tbody>
+
+        </table>
+
+
+        @Html.ActionLink("Ajouter une mission", "Ajouter une mission", "Ajouter une mission")
+
+   

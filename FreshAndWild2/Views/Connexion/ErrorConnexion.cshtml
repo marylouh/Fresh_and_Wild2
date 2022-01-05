@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <link href="~/css/connexion.css" rel="stylesheet">
+</head>
+<body>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    <br />
+    <br />
+    <br />
+    <div>Un problème est survenu, avez-vous vérifié votre identifiant et/ou votre mot de passe ?</div>
+    <br />
+    <div>Veuillez réessayer.</div>
+    <br />
+    @*<button type="button" id="reessayerBtn" value="Réessayer" onclick="window.load('/Connexion/conexion')">Fermer</button>*@
+    <br />
+    <button type="button" id="termBtn" value="Fermer" onclick="window.open('', '_self'); window.close();">Fermer</button>
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="~/js/MyScript.js"></script>
+
+</body>
+</html>

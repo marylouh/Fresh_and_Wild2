@@ -1,0 +1,83 @@
+﻿@model FreshAndWild2.Models.Produit
+@{ Layout = "_LayoutDuSite";
+    ViewBag.Title = "creer Produit";}
+
+<link href="~/css/AddActivite.css" rel="stylesheet">
+
+
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Gestion de la boutique : créer un produit</h2>
+            <ol>
+                <li><a href="Home">Home</a></li>
+                <li>Créer un nouveau produit</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="form-container">
+        <h3>Nouveau produit</h3>
+
+
+        <form asp-action="CreerProduit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProducteurId" class="control-label"></label>
+                <input asp-for="ProducteurId" class="form-control" />
+                <span asp-validation-for="ProducteurId" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" /></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conditionnement" class="control-label"></label>
+                <input asp-for="Conditionnement" class="form-control" />
+                <span asp-validation-for="Conditionnement" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Prix" class="control-label"></label>
+                <input asp-for="Prix" class="form-control" />
+                <span asp-validation-for="Prix" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock" class="control-label"></label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Creer" class="btn btn-primary" />
+            </div>
+        </form>
+
+
+    </div>
+
+
+
+
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+

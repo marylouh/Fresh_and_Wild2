@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <!-- CSS BOUTIQUE -->
+
+    <link href="~/css/boutique.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            <a href="/Home/Index" class="logo me-auto"><img src="/img/favicon.png" alt="" class="" /></a>
+            <h1 class="logo me-auto"><a href="/Home/Index">Fresh & Wild</a></h1>
+
+            <!-- === Navbar === -->
+            <!--Remplacer les liens des href vers les pages réelles lorsqu'elles seront créées-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <!--Ajouter "active" dans la classe de la page où on se trouve-->
+                    <li><a class="nav-link" href="/Home/Index">Accueil</a></li>
+
+                    <!-- <li><a class="nav-link scrollto" href="#about">Concept</a></li> -->
+                    <!--Changer le href pour la page Producteurs-->
+                    <li><a class="nav-link" href="/Producteur/Index">Producteurs</a></li>
+
+                    <!--Changer le href pour la page Paniers-->
+                    @*<li><a href="/Abonnement/Index"> Nos Paniers</a></li>*@
+
+                    <!--Changer le href de Produits pour la page générale des produits et le href de chaque produit pour sa page unique-->
+
+                    <li><a class="nav-link" href="/Produit/index">Nos Produits</a></li>
+
+                    <!--Idem pour les href que pour les produits-->
+                    <li class="dropdown">
+                        <a class="nav-link"><span>Communauté</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/Activite/Index">Activités</a></li>
+                            <li class="dropdown">
+
+                                @if (Context.User.Identity.IsAuthenticated)
+                                {
+                                <li><a href="/Benevole/Index">Se porter volontaire</a></li>
+                                @*<li class="dropdown">
+                                       <a href="#"><span>Forum</span> <i class="bi bi-chevron-right"></i></a>
+                                    </li>*@
+                            }
+
+                            </ul>
+                        </li>
+                        <li><a class="nav-link scrollto" href="/Home/Index/#contact">Contact</a></li>
+
+                        <!--href vers une page avec formulaire ou un formulaire en pop-up?-->
+                        <li><a class="getstarted" href="/Abonnement/Index">S'abonner à un panier</a></li>
+
+                        <!--Logos du panier et du profil-->
+                        <li class="dropdown nav-link">
+                            <a>
+                                <span>
+                                    <i class="bi bi-person-fill"
+                                       style="font-size: 1.5rem; color: #5cb874;"></i><i class="bi bi-chevron-down"></i>
+                                </span>
+                            </a>
+                            <ul>
+
+                                <!--Si pas encore connecté (activer cette ligne après vérif)-->
+                                <!--Vers un pop-up formulaire de connexion-->
+                                <!--Si déjà connecté (activer ces lignes après vérif)-->
+                                <!--Vers la page tableau de bord-->
+
+                                @if (Context.User.Identity.IsAuthenticated)
+                                {
+                                    @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                                        <ul class="navbar-nav">*@
+                                    <li>
+                                            <a class="nav-link" asp-controller="Connexion" asp-action="Deconnexion">Se déconnecter</a>
+                                        </li>
+                                    
+                                    @*</ul>
+                                        </div>*@
+                                }
+                                else
+                                {
+                                    <!--Si pas encore connecté (activer cette ligne après vérif)-->
+                                    <!--Vers un pop-up formulaire de connexion-->
+                                    <li>
+                                        <a class="nav-link" href="javascript:window.open('/Connexion/connexion', 'Connexion', 'width=400,height=350')">
+                                            Se connecter
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Panier/ObtenirPanier">
+                                <i class="bi bi-basket2"
+                                   style="font-size: 1.5rem; color: #5cb874;"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--Barre de menu si vision sur petit écran-->
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+            </div>
+        </header><!-- End Header -->
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container">
+                <h3>Fresh & Wild</h3>
+                <p>Produits et paniers bio, équitables et écoresponsables.</p>
+
+                <div class="copyright">
+                    &copy; 2022 <strong><span>Fresh & Wild</span></strong>. Tous droits réservés.
+                </div>
+                <div class="credits">
+                    <a href="">Mentions légales</a>
+                </div>
+            </div>
+        </footer><!-- Fin Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
+
+        <!-- Vendor JS Files -->
+        <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="~/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="~/js/main.js"></script>
+        <script src="~/Scripts/jquery-3.3.1.js"></script>
+        <script src="~/js/MyScript.js"></script>
+        
+    </body>
+</html>

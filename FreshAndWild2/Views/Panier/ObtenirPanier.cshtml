@@ -1,0 +1,75 @@
+﻿@model FreshAndWild2.Models.Panier
+
+
+@{ Layout = "_LayoutDuSite";
+    ViewBag.title = "Obtenir Panier";}
+
+<main id="main">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Votre Panier</h2>
+                <ol>
+                    <li><a href="/Home/Index">Accueil</a></li>
+                    <li>Votre Panier</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="container">
+        <h2> Votre panier contient :</h2>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th> Image</th>
+                    <th> Nom</th>
+                    <th> Prix</th>
+                    <th> Quantité</th>
+                    <th> Montant</th>
+                    <th> Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var lignePanier in Model.LignesPanier)
+                {
+                    <tr>
+                        <td>
+                            @{ var ip = "~/img/Produits/p" + lignePanier.produit.Id + ".jpg";}
+                            <img src="@Url.Content(ip)" width="100" />
+                        </td>
+                        <td>@lignePanier.produit.Nom</td>
+                        <td>@lignePanier.produit.Prix </td>
+                        <td>@lignePanier.Quantite </td>
+                        <td>@lignePanier.Montant() </td>
+
+                        <td>@Html.ActionLink("Supprimer", "SupprimerLigne", "Panier", new { id = lignePanier.Id })</td>
+                    </tr>
+                }
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> @(Model.LignesPanier.Sum(ligneProduit => ligneProduit.produit.Prix * ligneProduit.Quantite))</td>
+                    <td></td>
+
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="product-grid" style="text-align: left;">
+            @Html.ActionLink("PAYER", "Payer", "Panier", null, new { @class = "add_to_cart" })
+            <br />
+            <br />
+            @Html.ActionLink("Continuer mes achats", "Index", "Produit", null, new { @class = "add_to_cart" })
+            <br />
+            <br />
+        </div>
+    </div>
+
+</main>

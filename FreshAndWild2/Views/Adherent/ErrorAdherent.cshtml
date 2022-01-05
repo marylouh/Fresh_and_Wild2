@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <link href="~/css/connexion.css" rel="stylesheet">
+</head>
+<body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+    <div>Un problème est survenu, veuillez réessayer.</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿
+@{ Layout = "_LayoutDuSite";
+    ViewBag.Title = "Index";
+}
+
+<!--<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Communauté - Fresh&Wild</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">-->
+
+    <!-- Favicons -->
+    <!--<link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+    <!-- Google Fonts -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
+
+    <!-- Vendor CSS Files -->
+    <!--<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">-->
+
+    <!-- Template Main CSS File -->
+    <!--<link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>-->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Activités</h2>
+            <ol>
+                <li><a href="/Home/Index">Accueil</a></li>
+                <li>Activités</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+<section id="services" class="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Communauté</h2>
+            <p> En tant qu'adhérent, vous faites partie de la communauté Fresh & Wild ! </p>
+            <p> Ici vous pouvez : </p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-blue">
+                    <div class="icon">
+                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+                        </svg>
+                        <i class=""></i>
+                    </div>
+                    <img src="/img/Activite.jpeg" , style="width: 60%">
+                    <h4><a asp-area="" asp-controller="Activite" asp-action="ActivityViewUser"> Activités</a></h4>
+                    <p>Proposer des activités et participer à des ateliers </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="icon-box iconbox-orange ">
+
+
+                    <div class="icon">
+                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+                        </svg>
+
+
+                    </div>
+                    <img src="/img/benevolat.jpeg" , style="width: 100%">
+                    <h4><a asp-area="" asp-controller="Activite" asp-action="SePorterBenevole">Se porter bénévole </a></h4>
+                    <p> Aider nos producteurs </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box iconbox-pink">
+                    <div class="icon">
+                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+                        </svg>
+
+                    </div>
+                    <img src="/img/forum.jpeg" , style="width: 80%">
+                    <h4><a asp-area="" asp-controller="Activite" asp-action="Forum">Forum</a></h4>
+                    <p> Échanger des idées, des recettes et pourquoi pas des légumes et des fruits ?  </p>
+                </div>
+            </div>
+
+
+            @*<h2><a asp-area="" asp-controller="Activite" asp-action="ActiviteVue">Admin</a></h2>*@
+        </div>
+    </div>
+</section>

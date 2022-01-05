@@ -1,0 +1,48 @@
+@model FreshAndWild2.Models.Adherent
+@{ Layout = null;
+    ViewBag.title = "Connexion"; }
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Connexion Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/connexion.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <form method="post" action="/Connexion/ConnexionAdherent">
+        <div class="container">
+            <label for="Email"><b>Email</b></label>
+            <input id="email" type="text" placeholder="Entrez votre email" name="Email" required>
+
+            <label for="MotDePasseConnexion"><b>Mot de Passe</b></label>
+            <input id="motDePasse" type="password" placeholder="Entrez votre mot de passe" name="MotDePasseConnexion" required>
+
+            <input type="submit" name="Se connecter" value="Se connecter" id="btnSubmit" />
+        </div>
+
+        <div class="container" style="background-color:beige">
+            <button type="button" class="cancelbtn" onclick="javascript:window.open('', '_self'); window.close();">Annuler</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="~/js/MyScript.js"></script>
+
+
+</body>
+
+</html >
+

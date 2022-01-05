@@ -1,0 +1,54 @@
+﻿<style >
+.form-popup {
+    display: inline-block;
+    position: fixed;
+    left: 45%;
+    top: 25%;
+    transform: translate(-45%, 5%);
+    border: 3px solid #3CB371;
+    z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+    max-width: 700px;
+    padding: 10px;
+    background-color: beige;
+}
+
+/* Full-width input fields */
+.form-group {
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0 0px 0;
+    background: beige;
+    background-color: beige;
+    outline: none;
+}
+
+/* When the inputs get focus, do something */
+form-group {
+    background-color: beige;
+    border: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn add {
+    background-color: blue;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 10;
+}
+/* Add some hover effects to buttons */
+

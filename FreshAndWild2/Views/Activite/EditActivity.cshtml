@@ -1,0 +1,57 @@
+﻿@model FreshAndWild2.Models.Activite
+
+@{ Layout = "_LayoutDuSite";
+
+}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Modifier Activité</h2>
+
+        </div>
+    </div>
+</section>
+
+<h2>Modifier une Activite </h2>
+<form asp-action="EditActivity" enctype="multipart/form-data">
+    <div>
+
+        @Html.LabelFor(m => Model.titre)
+        @Html.TextBoxFor(m => Model.titre)
+        @Html.ValidationMessageFor(m => Model.titre)
+
+        <br />
+        <br />
+        @Html.LabelFor(m => Model.Lieu)
+        @Html.TextBoxFor(m => Model.Lieu)
+        @Html.ValidationMessageFor(m => Model.Lieu)
+        <br />
+        <br />
+        @Html.LabelFor(m => Model.Date)
+        @Html.TextBoxFor(m => Model.Date)
+        @Html.ValidationMessageFor(m => Model.Date)
+        <br />
+        <br />
+        @Html.LabelFor(m => Model.NbreParticipant)
+        @Html.TextBoxFor(m => Model.NbreParticipant)
+        @Html.ValidationMessageFor(m => Model.NbreParticipant)
+        <br />
+        <br />
+        @Html.LabelFor(m => Model.Description)
+        @Html.TextBoxFor(m => Model.Description)
+        @Html.ValidationMessageFor(m => Model.Description)
+
+
+        <input type="submit" value="Modifier" />
+
+</form>
+    </div>
+    
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+

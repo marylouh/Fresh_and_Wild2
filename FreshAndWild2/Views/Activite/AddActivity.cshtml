@@ -1,0 +1,85 @@
+﻿@model FreshAndWild2.Models.Activite
+
+@{ Layout = "_LayoutDuSite";
+
+}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>AddActivite Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/AddActivite.css" rel="stylesheet">
+
+
+
+</head>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-16">
+                <div class="modal-box">
+
+
+                    <div class="form-container">
+                        <h3>Ajouter une activité</h3>
+
+
+                        <form asp-action="AddActivity" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="titre" class="control-label"></label>
+                                <input asp-for="titre" class="form-control" />
+                                <span asp-validation-for="titre" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Date" class="control-label"></label>
+                                <input asp-for="Date" class="form-control" />
+                                <span asp-validation-for="Date" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Lieu" class="control-label"></label>
+                                <input asp-for="Lieu" class="form-control" />
+                                <span asp-validation-for="Lieu" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="NbreParticipant" class="control-label"></label>
+                                <input asp-for="NbreParticipant" class="form-control" />
+                                <span asp-validation-for="NbreParticipant" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <textarea asp-for="Description" class="form-control" /></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            
+
+
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+  

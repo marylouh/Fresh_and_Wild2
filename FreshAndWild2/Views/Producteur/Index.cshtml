@@ -1,0 +1,64 @@
+@{ ViewBag.Title = "Index";
+    Layout = "_LayoutDuSite"; }
+
+<style>
+    img {
+        object-fit: cover;
+    }
+</style>
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Nos Producteurs</h2>
+            <ol>
+                <li><a href="/Home/Index">Accueil</a></li>
+                <li>Producteurs</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section id="producteurs" class="producteurs">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Origine de nos produits</h2>
+            <p>
+                Ils s'engagent pour une agriculture durable et respectueuse de l'environnement et de notre santé à tous.<br />
+                Les producteurs partenaires de Fresh & Wild se mobilisent au quotidien pour vous proposer une large gamme de produits de qualité
+                et cultivés avec soin.<br />
+                Voici nos super producteurs !
+            </p>
+        </div>
+
+
+
+        <div class="row justify-content-center">
+
+            @foreach (var producteur in Model)
+            {
+    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+
+        <div class="product-grid">
+            <div class="product-image">
+                <a class="image">
+                    @{ var ip = "~/img/Producteurs/prod" + producteur.Id + ".jpeg";}
+                    <img src="@Url.Content(ip)" />
+                </a>
+            </div>
+            <div class="product-content">
+                <h4><a>@producteur.NomFerme</a></h4>
+                <p><a>@producteur.Description</a></p>
+
+
+                @{ var dp = "/Producteur/NomFerme/" + producteur.Id;}
+
+            </div>
+        </div>
+    </div>}
+
+        </div>
+
+    </div>
+</section>

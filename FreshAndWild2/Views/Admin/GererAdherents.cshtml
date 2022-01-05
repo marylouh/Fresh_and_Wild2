@@ -1,0 +1,84 @@
+﻿@model List<FreshAndWild2.Models.Adherent>
+@{ Layout = "_LayoutDuSite";
+
+}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Adhérents </h2>
+            <ol>
+                <li><a href="index.html">home</a></li>
+                <li>Liste d'adhérents</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+
+
+            <th scope="col">Valider</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var user in Model)
+
+        {
+            <tr>
+
+                <td>@user.Id</td>
+                <td>@user.Nom</td>
+                <td>@user.Prenom</td>
+                <td>@user.Adresse</td>
+                <td>@user.Email</td>
+
+                <td>@user.DateAdhesion.ToShortDateString()</td>
+
+
+
+                <td>@Html.DisplayFor(modelItem => user.AJour)</td>
+
+
+
+                <td>
+
+                    @Html.ActionLink("Valider", "VAliderAdherent", "Admin", new { @id = user.Id }),
+                    @Html.ActionLink("Contacter", "RefuserActivite", "Admin", new { @id = user.Id })
+                    @Html.ActionLink("Supprimer", "RefuserActivite", "Admin", new { @id = user.Id })
+
+
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+</table>
+
+
+
+
+
+<div />
+<section />

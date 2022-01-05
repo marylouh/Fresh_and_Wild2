@@ -1,0 +1,57 @@
+﻿@model FreshAndWild2.Models.Session
+
+@{ Layout = "_LayoutAdmin";
+
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-16">
+            <div class="modal-box">
+
+
+                <div class="form-container">
+                    <h3>Ajouter une activité</h3>
+
+
+                    <form asp-action="benevole" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="Nom" class="control-label"></label>
+                            <input asp-for="Nom" class="form-control" />
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateSession" class="control-label"></label>
+                            <input asp-for="DateSession" class="form-control" />
+                            <span asp-validation-for="DateSession" class="text-danger"></span>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="NbreDeBenevoleDemandee" class="control-label"></label>
+                            <input asp-for="NbreDeBenevoleDemandee" class="form-control" />
+                            <span asp-validation-for="NbreDeBenevole" class="text-danger"></span>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+

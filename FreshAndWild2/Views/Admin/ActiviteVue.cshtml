@@ -1,0 +1,94 @@
+﻿@model List<FreshAndWild2.Models.Activite>
+@{ Layout = "_LayoutDuSite";
+
+}
+
+
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Caummunauté </h2>
+            <ol>
+                <li><a href="index.html">home</a></li>
+                <li>Activité</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Date</th>
+            <th scope="col">Lieu</th>
+            <th scope="col">Nombre de participants</th>
+            <th scope="col">Description</th>
+
+            <th scope="col">Valider</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var activite in Model)
+
+        {
+            <tr>
+
+                <td>@activite.titre</td>
+                <td>@activite.Date.ToShortDateString()</td>
+                <td>@activite.Lieu</td>
+                <td>@activite.NbreParticipant)</td>
+                <td>@activite.Description</td>
+
+
+                <td>@Html.DisplayFor(modelItem => activite.valid)</td>
+
+
+
+                <td>
+
+                    @Html.ActionLink("Valider", "VAliderActivite", "Admin", new { @id = activite.Id }),
+                    @Html.ActionLink("Refuser", "RefuserActivite", "Admin", new { @id = activite.Id })
+
+
+
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+</table>
+
+
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Caummunauté </h2>
+            <ol>
+                <li><a href="index.html">home</a></li>
+                <li>Bénévolat</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<h4><a asp-area="" asp-controller="Admin" asp-action="benevole"> Mission de Bénévolat</a></h4>
+
+
+<div />
+<section />

@@ -1,0 +1,305 @@
+@{ Layout = "_LayoutDuSite";
+    ViewBag.Title = "Index"; }
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <!-- ======= Section Carousel ======= -->
+
+    <section id="hero">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(/img/slide/crop.jpeg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Nos Producteurs</h2>
+                            <p class="animate__animated animate__fadeInUp">
+                                Ils sont beaux, ils aiment le bio, découvrez nos producteurs
+                                locaux !
+                            </p>
+                            <a href="/Producteur/Index" class="btn-get-started animate__animated animate__fadeInUp scrollto">
+                                En Savoir
+                                Plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(/img/slide/vegetables.jpeg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Les Paniers</h2>
+                            <p class="animate__animated animate__fadeInUp">Frais, variés et de saison, vous n'allez plus pouvoir vous en passer !</p>
+                            <a href="/Abonnement/Index" class="btn-get-started animate__animated animate__fadeInUp scrollto">
+                                En Savoir
+                                Plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(/img/slide/crop2.jpeg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Le Concept</h2>
+                            <p class="animate__animated animate__fadeInUp">Découvrez notre philosophie et nos engagements !</p>
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">En Savoir Plus</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Boutons pour avancer ou revenir au visuel précédent-->
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </section><!-- Fin Carousel -->
+
+    <main id="main">
+
+        <!-- ======= Section Concept ======= -->
+
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Le Concept</h2>
+                    <p>Bievenue dans notre démarche innovante et militante !</p>
+                </div>
+
+                <div style="text-align:center">
+                    <h3>Enfin ! Du bio de qualité, équitable, écoresponsable et flexible ! </h3>
+                    <p class="fst-italic">
+                        Ces mots vous parlent ? Normal. Mais pensiez-vous que cela soit possible sans être contraignant ? C'est
+                        désormais possible grâce à notre communauté
+                        engagée !
+                    </p>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <img src="~/img/solidarity2.jpeg" class="img-fluid" alt="" style=" width: 90%; height: 90%; object-fit: cover; object-position: center;" />
+                        
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="text-align:justify; text-justify:inter-word;">
+
+                        <p>
+                            Fresh & Wild est une association loi 1901 qui se rapproche du modèle des AMAP tout en offrant une plus
+                            grande flexibilité au consommateur.<br>
+                            <br>
+                            Nous nous engageaons entre autres à :<br>
+                            <ul>
+                                <li>- Rémunérer chaque agriculteur équitablement au début de chaque saison</li>
+                                <li>- Proposer aux adhérents de l’association des produits issus de fermes locales</li>
+                                <li>- Être transparents dans la provenance ou la transformation des produits</li>
+                                <li>
+                                    - Proposer des activités afin de renforcer la solidarité entre les agriculteurs et les consommateurs
+                                </li>
+                                <li>
+                                    - Mettre à disposition un lieu de rencontre pour les agriculteurs et les consommateurs permettant de
+                                    renforcer le lien social
+                                </li>
+                                <li>- Fournir des produits de qualité certifiés AB</li>
+                                <li>- Respecter l’environnement et avoir une démarche écoresponsable</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- Fin Concept -->
+      
+        <!-- ======= Section Adhésion ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-start">
+                        <h3>Votre adhésion fait la différence !</h3>
+                        <p>
+                            Adhérer à Fresh & Wild c'est soutenir nos valeurs et notre engagement militant. Dès que vous serez
+                            adhérent.e,
+                            vous aurez la possibilité, si vous le souhaitez, de vous abonner à une de nos formules de paniers bio.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="javascript:window.open('/Adherent/Adhesion', 'CreerAdherent', 'width=600,height=800')">Demander à adhérer</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- Fin Adhésion -->
+
+        <!-- ======= Section Équipe ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>L'Équipe</h2>
+                    <p>
+                        Nos profils riches et variés nous ont permis de créer Fresh & Wild en unissant nos forces autour d'un idéal
+                        commun.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                            <img src="~/img/team/Houria.png" alt="">
+                            <h4>Houria Benmokrane</h4>
+                            <span>Administratrice et Trésorière</span>
+                            @*<p>
+                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut
+                                aut
+                            </p>*@
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/houria-benmokrane-0045aa12b/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                            <img src="~/img/team/Cheick.png" alt="">
+                            <h4>Cheick Dieng</h4>
+                            <span>Responsable Produits et Producteurs</span>
+                            @*<p>
+                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                            </p>*@
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/cheick-m-d/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                            <img src="~/img/team/Jeanne.png" alt="">
+                            <h4>Jeanne Priso</h4>
+                            <span>Présidente de Fresh & Wild</span>
+                            @*<p>
+                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                            </p>*@
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/jeanne-priso-487b573/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                            <img src="~/img/team/Charlotte.png" alt="">
+                            <h4>Charlotte Van Hove</h4>
+                            <span>Secrétaire et Responsable Abonnés</span>
+                            @*<p>
+                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                            </p>*@
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/charlotte-vh/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- Fin Équipe -->
+
+        <!-- ======= Section Contact ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>
+                        Pour toute question ou demande de renseignement sur notre offre et nos produits, n'hésitez pas à nous
+                        contacter par mail, téléphone ou directement via le formulaire de contact ci-dessous. Merci pour votre
+                        intérêt !
+                    </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Localisation:</h4>
+                                <p>3 rue Danton, 92240 Malakoff, FRANCE</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>info@freshandwild.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Téléphone:</h4>
+                                <p>+33 123 45 67 89</p>
+                            </div>
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8903841326755!2d2.2987291159273298!3d48.82215287928396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6705c21f0938f%3A0xd7b9385017b467bc!2s3%20Rue%20Danton%2C%2092240%20Malakoff!5e0!3m2!1sfr!2sfr!4v1639147805492!5m2!1sfr!2sfr"
+                                    frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Votre Nom</label>
+                                    <input type="text" name="name" class="form-control" id="name" required>
+                                </div>
+                                <div class="form-group col-md-6 mt-3 mt-md-0">
+                                    <label for="name">Votre Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="name">Sujet</label>
+                                <input type="text" class="form-control" name="subject" id="subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="name">Message</label>
+                                <textarea class="form-control" name="message" rows="10" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Chargement</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Votre message a été envoyé. Merci !</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Envoyer</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- Fin Contact -->
+
+    </main><!-- Fin #main -->
+    
+</body>
+
+</html>

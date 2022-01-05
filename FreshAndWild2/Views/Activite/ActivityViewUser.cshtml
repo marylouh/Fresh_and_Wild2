@@ -1,0 +1,118 @@
+﻿@model List<FreshAndWild2.Models.Activite>
+
+
+
+
+@{ Layout = "_LayoutDuSite";
+
+}
+
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>AddActivite Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/ActivityViewUser.css" rel="stylesheet">
+    <!-- <link href="~/css/AddActivite.css" rel="stylesheet"> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Activités</h2>
+            <ol>
+                <li><a href="/Home/Index">Accueil</a></li>
+                <li>Activités</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="details-card">
+    <div class="container">
+        <div class="row">
+
+
+
+            @foreach (var activite in Model)
+
+            {
+
+
+
+                <div class="col-md-4">
+                    <div class="card-content">
+
+                        <ul class="list-group">
+                            <div class="card-img">
+                                <img src="https://placeimg.com/380/230/animals" alt="">
+
+                                <span><h4>@activite.titre </h4></span>
+                            </div>
+                            <div class="card-desc">
+                                <h3>@activite.titre</h3>
+
+
+
+
+                            <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Adhérent: </li>
+                            <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i>  Location: @activite.Lieu </li>
+                            <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i>   Date: @activite.Date </li>
+                            <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i>Nombre de particpants: @activite.NbreParticipant </li>
+                            <li class="list-group-item list-group-item-success"><i class="fa fa-euro" style="font-size:20px;"></i>Prix</li>
+
+                        </ul>
+
+                        }
+                        <a href="#" class="btn-card">Participer</a>
+                        @Html.ActionLink("Modifier", "EditActivity", "Activite", new { @id = activite.Id }),
+                        @Html.ActionLink("Supprimer", "DeleteActivite", "Activite", new { @id = activite.Id })
+
+
+
+                    </div>
+                </div>
+            }
+
+
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                    </div>
+                    <div class="card-desc">
+
+                        <ul class="list-group">
+                        </ul>
+
+                        <h4><a asp-area="" asp-controller="Activite" asp-action="AddActivity" class="btn-card">Proposer une activité </a></h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+
+</section>

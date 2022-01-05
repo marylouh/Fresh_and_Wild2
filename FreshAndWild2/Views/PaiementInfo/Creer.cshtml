@@ -1,0 +1,58 @@
+﻿@model FreshAndWild2.Models.PaiementInfo
+@{
+
+    Layout = "_LayoutDuSite";
+    ViewBag.title = "Creer";
+}
+
+<!DOCTYPE html>
+
+<html>
+<body>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container2">
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                @using (Html.BeginForm())
+                {
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Titulaire</label>
+                            @*<input type="text" name="name" class="form-control" id="name" required>*@
+                            @Html.TextBoxFor(m => m.Titulaire, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-6 mt-3 mt-md-0">
+                            <label for="name">Numero de la carte bancaire</label>
+                            @*<input type="email" class="form-control" name="email" id="email" required>*@
+                            @Html.TextBoxFor(m => m.NumeroCb, new { @class = "form-control", @type = "number" })
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="name">Date d'expiration</label>
+                        @*<input type="text" class="form-control" name="subject" id="subject" required>*@
+                        @Html.TextBoxFor(m => m.ExpirationCb, new { @class = "form-control" })
+
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="name">Code cvc</label>
+                        @Html.TextBoxFor(m => m.CodeCvc, new { @class = "form-control", @type = "number" })
+
+                        @*<textarea class="form-control" name="form-control" rows="10" required></textarea>*@
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Chargement</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Paiement autorisé. </div>
+                    </div>
+
+
+                    @*@Html.HiddenFor(m => m.AdherentId)
+                        <div class="text-center"><button type="submit">Ajouter vos moyens de paiement</button></div>*@
+                }
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

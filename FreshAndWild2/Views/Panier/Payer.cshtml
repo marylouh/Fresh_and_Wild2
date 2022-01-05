@@ -1,0 +1,113 @@
+﻿@model FreshAndWild2.ViewModels.PaiementViewModel
+
+
+@{ Layout = "_LayoutDuSite";
+    ViewBag.title = "Payer";}
+
+<main id="main">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Régler vos achats</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Votre panier</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container p-3 mt-5 border">
+
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="javascript:window.open('/Panier/SuccesPaiement', 'SuccesPaiement', 'width=400,height=350')">
+                        @*DEBOUCHÉ ?*@
+
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Adresse de Facturation</h3>
+                                <label for="fname"><i class="fa fa-user"></i> Nom</label>
+                                <input type="text" id="fname" name="firstname" value="@Model.adherent.Nom @Model.adherent.Prenom">
+
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" value="@Model.adherent.Email">
+
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Adresse</label>
+                                <input type="text" id="adr" name="address" value="@Model.adherent.Adresse.NumVoie @Model.adherent.Adresse.LibelleVoie">
+
+                                <label for="city"><i class="fa fa-institution"></i> Ville</label>
+                                <input type="text" id="city" name="city" value="@Model.adherent.Adresse.Commune">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="zip">Code Postal</label>
+                                        <input type="text" id="state" name="zip" value="@Model.adherent.Adresse.CodePostal">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3>Paiement</h3>
+                                <label for="fname">Cartes Acceptées</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <br />
+                                <br />
+                                <label for="cname">Titulaire de la Carte</label>
+                                <input type="text" id="cname" name="cardname" value="@Model.adherent.paiementInfo.Titulaire">
+                                <label for="ccnum">Numéro de la Carte</label>
+                                <input type="password" id="ccnum" name="cardnumber" value="@Model.adherent.paiementInfo.NumeroCb">
+                                @*<label for="expmonth">Mois d'expiration</label>
+        <input type="text" id="expmonth" name="expmonth">*@
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Date d'Expiration</label>
+                                        <input type="text" id="expyear" name="expyear" value="@Model.adherent.paiementInfo.ExpirationCb">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvc">CVC</label>
+                                        <input type="password" id="cvc" name="cvc" value="@Model.adherent.paiementInfo.CodeCvc">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        @*<label>
+                                <input type="checkbox" checked="checked" name="sameadr"> Adresse de livraison identique à l'adresse de facture'
+                            </label>*@
+                        <input type="submit" value="Terminer le paiement" class="btn">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-25">
+                <div class="container">
+                    <h4>
+                        Vos achats
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                        <br />
+                        <br />
+                        @foreach (var lignePanier in Model.panier.LignesPanier)
+                        {
+                            <p><a href="#">@lignePanier.produit.Nom</a> <span class="price">@lignePanier.Montant()</span></p>}
+
+                        <p>Total <span class="price" style="color:black"><b>@(Model.panier.LignesPanier.Sum(ligneProduit => ligneProduit.produit.Prix * ligneProduit.Quantite))</b></span></p>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>

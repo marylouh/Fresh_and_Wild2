@@ -1,0 +1,63 @@
+﻿@{ Layout = "_Layout";
+
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Connexion Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/connexion.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Administration</h2>
+                
+            </div>
+        </div>
+    </section>
+
+    <form method="post" action="Admin/Home">
+        <div class="container">
+            <label for="username"><b>Identifiant</b></label>
+            <input id="username" type="text" placeholder="Entrez votre identifiant" name="Email" required>
+
+            <label for="password"><b>Mot de Passe</b></label>
+            <input id="password" type="password" placeholder="Entrez votre mot de passe" name="MotDePasseConnexion" required>
+
+            <input type="submit" name="Se connecter" value="Se connecter" />
+        </div>
+
+        
+    </form>
+
+    @*<script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script>*@
+
+        @*function validateForm()
+        {
+            if (0) {
+                window.open('', '_self'); window.close();
+            }
+        }*@
+
+    </script>
+
+
+</body>
+
+</html>

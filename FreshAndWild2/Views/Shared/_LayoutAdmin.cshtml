@@ -1,0 +1,115 @@
+﻿
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Fresh & Wild</title>
+    <meta content="Mangez frais, mangez bio !" name="description">
+    <meta content="AMAP, bio, nourriture, santé" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+
+
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            <a href="index.cshtml" class="logo me-auto"><img src="/img/favicon.png" alt="" class="" /></a>
+            <h1 class="logo me-auto"><a href="index.cshtml">Fresh & Wild</a></h1>
+
+            <!-- === Navbar === -->
+            <!--Remplacer les liens des href vers les pages réelles lorsqu'elles seront créées-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <!--Ajouter "active" dans la classe de la page où on se trouve-->
+                    <li><a class="nav-link scrollto active" href="/Admin/Home">Home</a></li>
+
+                    <!-- <li><a class="nav-link scrollto" href="#about">Concept</a></li> -->
+                    <!--Changer le href pour la page Producteurs-->
+                    <li><a class="nav-link scrollto" href="#services">Adhérent</a></li>
+
+                    <!--Changer le href pour la page Paniers-->
+                    <li><a class="nav-link scrollto " href="#portfolio">Produit</a></li>
+
+                    <!--Changer le href de Produits pour la page générale des produits et le href de chaque produit pour sa page unique-->
+                    <!--Idem pour les href que pour les produits-->
+
+                    <a href="#"><span>Communauté</span> </i></a>
+
+
+                    <a href="#"><span>Se connecter</span> </i></a>
+
+
+
+
+                   
+
+                   
+
+                <!--Barre de menu si vision sur petit écran-->
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>Fresh & Wild</h3>
+            <p>Produits et paniers bio, équitables et écoresponsables.</p>
+            <!-- <div class="social-links">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div> -->
+            <div class="copyright">
+                &copy; 2022 <strong><span>Fresh & Wild</span></strong>. Tous droits réservés.
+            </div>
+            <div class="credits">
+                <a href="">Mentions légales</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/js/main.js"></script>
+
