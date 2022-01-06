@@ -90,7 +90,18 @@ namespace FreshAndWild2.Models
                     CodeCvc = 165,
                     //AdherentId = 3,
 
+                },
+
+                new PaiementInfo
+                {
+                    Id = 3,
+                    NumeroCb = 495421564,
+                    Titulaire = "Cheick Dieng",
+                    ExpirationCb = "11/2022",
+                    CodeCvc = 165,
+                    //AdherentId = 3,
                 }
+
                );
             this.SaveChanges();
 
@@ -101,7 +112,7 @@ namespace FreshAndWild2.Models
                     Id = 1,
                     Nom = "Admin",
                     Prenom = "Admin",
-                    Email = "admin@freshandwild.com",
+                    Email = "admin@faw.com",
                     DateAdhesion = DateTime.Today,
                     MotDePasseConnexion = "admin123",
                     AdresseId = 1,
@@ -134,6 +145,21 @@ namespace FreshAndWild2.Models
                     MotDePasseConnexion = "123",
                     AdresseId = 1,
                     PaiementInfoId = 1,
+                    AJour = true,
+                    Admin = false,
+
+                },
+
+                new Adherent
+                {
+                    Id = 4,
+                    Nom = "Dieng",
+                    Prenom = "Cheick",
+                    Email = "cheick@gmail.com",
+                    DateAdhesion = DateTime.Today,
+                    MotDePasseConnexion = "123",
+                    AdresseId = 1,
+                    PaiementInfoId = 3,
                     AJour = true,
                     Admin = false,
 

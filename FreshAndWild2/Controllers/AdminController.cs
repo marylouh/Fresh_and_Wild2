@@ -25,7 +25,7 @@ namespace FreshAndWild2.Controllers
         {
             if (HttpContext.User.Identity.IsAuthenticated)
             {
-                return Redirect("/Admin/Home");
+                return Redirect("/Admin/Index");
             }
             return View();
         }

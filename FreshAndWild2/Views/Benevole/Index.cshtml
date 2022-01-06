@@ -23,7 +23,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h2> Se Porter Bénévole</h2>
                 <ol>
-                    <li><a href="/Home/Home">Index</a></li>
+                    <li><a href="/Home/Index">Accueil</a></li>
                     <li>Bénévolat</li>
                 </ol>
             </div>
@@ -37,7 +37,7 @@
                 <tr>
                     <th scope="col">Session</th>
                     <th scope="col">Date</th>
-                    <th scope="col">Benevole</th>
+                    <th scope="col">Benevoles</th>
 
                 </tr>
             </thead>
@@ -49,7 +49,7 @@
                     <tr>
                         <td>@session.Id</td>
                         <td>@session.DateSession.ToShortDateString()</td>
-                        <td>@session.NbreDeBenevoleDemandes</td>
+                        <td>@session.NbreDeBenevolesDemandes</td>
                         <td>
 
                             @Html.ActionLink("Se porter benevole", "Se porter benevole", "Se porter benevole", new { @id = session.Id })
