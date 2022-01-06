@@ -151,7 +151,7 @@ namespace FreshAndWild2.Models
                 Description = "Saclay (91), 50 hectares de terres cultivées."},
 
             new Producteur
-            { NomFerme = "Lactel",
+            { NomFerme = "Du Pis au Verre",
                 Description = "Saint-Rémy-Les-Chevreuses (78), 30 vaches laitières et 40 hectares de pâturages."}
                 )
                 ;
