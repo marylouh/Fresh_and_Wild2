@@ -33,8 +33,8 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center">
 
-            <a href="index.cshtml" class="logo me-auto"><img src="/img/favicon.png" alt="" class="" /></a>
-            <h1 class="logo me-auto"><a href="index.cshtml">Fresh & Wild</a></h1>
+            <a href="/Home/Index" class="logo me-auto"><img src="/img/favicon.png" alt="" class="" /></a>
+            <h1 class="logo me-auto"><a href="/Home/Index">Fresh & Wild</a></h1>
 
             <!-- === Navbar === -->
             <!--Remplacer les liens des href vers les pages réelles lorsqu'elles seront créées-->
@@ -42,25 +42,25 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <!--Ajouter "active" dans la classe de la page où on se trouve-->
-                    <li><a class="nav-link scrollto active" href="/Admin/Home">Home</a></li>
+                    <li><a class="nav-link" href="/Admin/Home">Home</a></li>
 
                     <!-- <li><a class="nav-link scrollto" href="#about">Concept</a></li> -->
                     <!--Changer le href pour la page Producteurs-->
-                    <li><a class="nav-link scrollto" href="#services">Adhérent</a></li>
+                    <li><a class="nav-link" href="/Admin/GererAdherents">Adhérents</a></li>
 
                     <!--Changer le href pour la page Paniers-->
-                    <li><a class="nav-link scrollto " href="#portfolio">Produit</a></li>
+                    <li><a class="nav-link" href="/Admin/GererProduits">Produit</a></li>
 
                     <!--Changer le href de Produits pour la page générale des produits et le href de chaque produit pour sa page unique-->
                     <!--Idem pour les href que pour les produits-->
 
-                    <a href="#"><span>Communauté</span> </i></a>
+                    <li><a class="nav-link" href="/Admin/ActiviteVue">Communauté</a></li>
 
 
-                    <a href="#"><span>Se connecter</span> </i></a>
+                    @*<a href="#"><i><span>Se connecter</span> </i></a>*@
 
 
-
+</ul>
 
                    
 

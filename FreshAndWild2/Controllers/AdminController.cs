@@ -88,7 +88,7 @@ namespace FreshAndWild2.Controllers
             {
                 dal.AdherentValidee(id);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("GererAdherents", "Admin");
         }
 
         public IActionResult GererProduits()
@@ -116,7 +116,7 @@ namespace FreshAndWild2.Controllers
 
                 dal.CreerSession(session);
 
-                return RedirectToAction(nameof(Home));
+                return RedirectToAction("Home", "Admin");
             }
 
 
@@ -131,7 +131,7 @@ namespace FreshAndWild2.Controllers
             {
                 dal.ActiviteValidee(id);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ActiviteVue", "Admin");
         }
         //-------------------------Prouits
 
@@ -146,7 +146,7 @@ namespace FreshAndWild2.Controllers
             BddContext bddContext = new BddContext();
             bddContext.Produits.Add(produit);
             bddContext.SaveChanges();
-            return RedirectToAction("Home");
+            return RedirectToAction("GererProduits", "Admin");
         }
 
 
@@ -171,7 +171,7 @@ namespace FreshAndWild2.Controllers
             BddContext bddContext = new BddContext();
             bddContext.Produits.Update(produit);
             bddContext.SaveChanges();
-            return RedirectToAction("Home");
+            return RedirectToAction("GererProduits", "Admin");
 
         }
 
@@ -186,7 +186,7 @@ namespace FreshAndWild2.Controllers
                 bddContext.Produits.Remove(produit);
                 bddContext.SaveChanges();
             }
-            return RedirectToAction("Home");
+            return RedirectToAction("GererProduits", "Admin");
         }
 
 

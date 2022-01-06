@@ -1,5 +1,5 @@
 ﻿@model FreshAndWild2.Models.Produit
-@{ Layout = "_LayoutDuSite";
+@{ Layout = "_LayoutAdmin";
     ViewBag.Title = "creer Produit";}
 
 <link href="~/css/AddActivite.css" rel="stylesheet">
@@ -12,7 +12,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2>Gestion de la boutique : créer un produit</h2>
             <ol>
-                <li><a href="Home">Home</a></li>
+                <li><a href="/Admin/Home">Accueil</a></li>
                 <li>Créer un nouveau produit</li>
             </ol>
         </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <textarea asp-for="Description" class="form-control" /></textarea>
+                <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">

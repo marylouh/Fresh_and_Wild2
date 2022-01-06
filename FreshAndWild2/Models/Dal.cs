@@ -358,7 +358,7 @@ namespace FreshAndWild2.Models
             {
                 Nom = nom,
                 DateSession = date,
-                NbreDeBenevoleDemandee = nbreAdherentDemende,
+                NbreDeBenevoleDemandes = nbreAdherentDemende,
 
             };
 
