@@ -23,10 +23,10 @@ namespace FreshAndWild2.Controllers
         }
         public IActionResult Index()
         {
-            if (HttpContext.User.Identity.IsAuthenticated)
-            {
-                return Redirect("/Admin/Index");
-            }
+            //if (HttpContext.User.Identity.IsAuthenticated)
+            //{
+            //    return Redirect("/Admin/Index");
+            //}
             return View();
         }
 
