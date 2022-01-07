@@ -69,8 +69,6 @@ namespace FreshAndWild2.Controllers
             return RedirectToAction("ObtenirPanier", "Panier");
         }
 
-
-
         // retourne lignePanier Id si le produit existe déjà
         // retourne -1 dans le cas contraire
 
@@ -124,7 +122,11 @@ namespace FreshAndWild2.Controllers
                 //var adherentId = User.GetLoggedInUserId<int>();
                 Adherent adherent = bddContext.Adherents.Include(p => p.paiementInfo).Include(a => a.Adresse).Where(p => p.Id == adherentId).FirstOrDefault();
 
-
+                foreach (var lignePanier in panier.LignesPanier)
+                {
+                    SupprimerLigne(lignePanier.Id);
+                };
+                
                 PaiementViewModel PVM = new PaiementViewModel()
                 {
                     panier = panier,
